@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stanovi - cijene</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+    <h2>Lokacija</h2>
+	<div>
+  <select class="location" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Odaberi lokaciju</option>
+		<option>Ilidža</option>
+        <option>Novi Grad</option>
+        <option>Novo Sarajevo</option>
+        <option>Općina Centar</option>
+        <option>Stari Grad</option>
+        <option>Vogošća</option>
+        <option>Ostalo</option>
+  </select>
+</div>
+	
+	<h2>Broj kvadrata</h2>
+    <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="50">
+	<h2>Broj soba</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bhk-1" name="brojSoba" value="1"/>
+		<label for="radio-bhk-1">1</label>
+		<input type="radio" id="radio-bhk-2" name="brojSoba" value="2" checked/>
+		<label for="radio-bhk-2">2</label>
+		<input type="radio" id="radio-bhk-3" name="brojSoba" value="3"/>
+		<label for="radio-bhk-3">3</label>
+		<input type="radio" id="radio-bhk-4" name="brojSoba" value="4"/>
+		<label for="radio-bhk-4">4</label>
+		<input type="radio" id="radio-bhk-5" name="brojSoba" value="5"/>
+        <label for="radio-bhk-5">5</label>
+        <input type="radio" id="radio-bhk-more" name="brojSoba" value="more"/>
+		<label for="radio-bhk-more">..</label>
+	</div>
+    </form>
+<form class="form">
+	<h2>Sprat</h2>
+	<div class="switch-field">
+		<input type="radio" id="sprat1" name="uiSprat" value="Suteren"/>
+		<label for="sprat1">Suteren</label>
+		<input type="radio" id="sprat2" name="uiSprat" value="Prizemlje" checked/>
+		<label for="sprat2">Prizemlje</label>
+        <input type="radio" id="sprat3" name="uiSprat" value="Vise" checked/>
+        <label for="sprat3">Vise</label>
+    </div> 
+
+    <h2>Stanje</h2>
+    <div class="switch-field">
+		<input type="radio" id="stanje1" name="uiStanje" value="Koristeno" />
+		<label for="stanje1">Koristeno</label>
+        <input type="radio" id="stanje2" name="uiStanje" value="Nekoristeno" checked/>
+        <label for="stanje2">Nekoristeno</label>
+    </div>
+    <div class="switch-field">
+		<input type="radio" id="pozicija1" name="uiPozicija" value="Namjesten"/>
+		<label for="pozicija1">Namjesten</label>
+		<input type="radio" id="pozicija2" name="uiPozicija" value="Nenamjesten" checked/>
+		<label for="pozicija2">Nenamjesten</label>
+        <input type="radio" id="pozicija3" name="uiPozicija" value="Polunamjesten" checked/>
+        <label for="pozicija3">Polunamjesten</label>
+    </div>
+
+
+    <h2>Grijanje</h2>
+    <div class="switch-field">
+		<input type="radio" id="grijanje1" name="uiGrijanje" value="Plin"/>
+		<label for="grijanje1">Plin</label>
+		<input type="radio" id="grijanje2" name="uiGrijanje" value="Centralno(gradsko)" checked/>
+		<label for="grijanje2">Centralno(gradsko)</label>
+        <input type="radio" id="grijanje3" name="uiGrijanje" value="Centralno(kotlovnica)" checked/>
+        <label for="grijanje3">Centralno(kotlovnica)</label>
+        <input type="radio" id="grijanje4" name="uiGrijanje" value="Struja" checked/>
+        <label for="grijanje4">Struja</label>
+        <input type="radio" id="grijanje5" name="uiGrijanje" value="Ostalo" checked/>
+        <label for="grijanje5">Ostalo</label>
+    </div>
+    <button class="submit" onclick="onClickedEstimatePrice()" type="button">Cijena</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+		</form>
+</body>
+</html>
